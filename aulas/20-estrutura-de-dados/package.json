@@ -1,0 +1,15 @@
+{
+  "name": "20-estrutura-de-dados",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "echo \"Error: no test specified\" && exit 1",
+    "start2": "echo \"Error: no test specified\" && exit 1",
+    "stack": "echo \"Error: no test specified\" && exit 1",
+    "queue": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

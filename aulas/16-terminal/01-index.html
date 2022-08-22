@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terminal</title>
+  <link rel="stylesheet" href="01-style.css">
+</head>
+<body>
+  <header>
+    <h1></h1>
+  </header>
+  <main>
+    <h2>Por que esse curso?</h2>
+    <ul>
+      <li>Entender o que é um terminal, shell, bash e outros termos</li>
+      <li>Estudar comando utilizados para operar no seu sistema operacional</li>
+      <li>Quando você precisar gerenciar um servidor remoto, e não tiver acesso à interface gráfica, você terá que saber alguns comandos básicos para operar o sistema</li>
+      <li>Terá maior clareza do fazemos ao executar comandos via terminal</li>
+      <li>Ganhar confiança ao utilizar a telinha preta</li>
+    </ul>
+    <h2>O que é command line?</h2>
+    <dl>
+      <dt>GUI</dt>
+      <dd>Graphical User Interface</dd>
+      <dd>Interface Gráfica de Usuário</dd>
+      <dd>Janelas, Botões, Menus, Mouse</dd>
+      <dd>Ver vídeos, jogar, trabalhar com imagens e edição de vídeo</dd>
+      <dt>CLI</dt>
+      <dd>Command Line Interface</dd>
+      <dd>Interface de linha de comando</dd>
+      <dd>Enviar comandos</dd>
+      <dd>Ver resultados dos comandos</dd>
+      <dt>Shell ou interpretador é o ambiente</dt>
+      <dd>Executa os comandos</dd>
+      <dd>Conversar com o kernel</dd>
+      <dt>Bash: Bourne-again shell</dt>
+      <dd>Por padrão, existe em ambientes linux</dd>
+    </dl>
+    <h2>Sintaxe</h2>
+    <p><strong>ls -lh /usr/bin</strong></p>
+    <dl>
+      <dt>Command <strong>ls</strong></dt>
+      <dd>Programa que você está rodando</dd>
+      <dd>Obrigatório</dd>
+      <dt>Option(s) <strong>-lh</strong></dt>
+      <dd>Mudar o comportamento</dd>
+      <dd>Explicar ao comando como deve funcionar</dd>
+      <dd>Geralmente, começa com um traço</dd>
+      <dd>Geralmente, uma letra somente</dd>
+      <dd>A ordem não importa e pode conter varios</dd>
+      <dd>A maioria dos comando oferece muitas opções</dd>
+      <dt>Argument(s) <strong>/usr/bin</strong></dt>
+      <dd>Onde o comando irá operar</dd>
+      <dd>Caminho do arquivo ou diretório</dd>
+      <dd>Caso esteja em branco vai ao diretório atual</dd>
+    </dl>
+    <h2>Tab completion</h2>
+    <ul>
+      <li>command</li>
+      <li>arguments</li>
+    </ul>
+    <p>Completa e dá sugestões</p>
+    <h2>cd</h2>
+    <dl>
+      <p>- Mudar de diretório</p>
+      <dt>.</dt>
+      <dd>Diretório atual</dd>
+      <dt>..</dt>
+      <dd>Voltar diretórios</dd>
+    </dl>
+    <h2>Comando tipíco do powershell</h2>
+    <p>comando parâmetro1 valor1 parâmetro2 valor2</p>
+    <h2>$PSVersionTable</h2>
+    <p>Mostra a versão atual do powershell</p>
+    <h2>Clear-Host</h2>
+    <p>Limpa a tela</p>
+    <h2>Get-Alias -Definition "comando"</h2>
+    <p>Diz se o comando consultado possui alias (semelhante a abreviação)</p>
+    <h2>Get-Service (gsv)</h2>
+    <p>Lista os serviços do sistema</p>
+    <h2>help / get-help</h2>
+    <p>Busca a ajuda do comando</p>
+    <h2>Update-help</h2>
+    <p>Atualiza o comando help</p>
+    <h2>Get-Location</h2>
+    <p>Informa o caminho absoluto do diretório atual</p>
+  </main>
+  <footer>
+    <p>Made by Mateus Nunes</p>
+  </footer>
+  <script src="01-scripts.js"></script>
+</body>
+</html>

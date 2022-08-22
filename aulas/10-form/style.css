@@ -1,0 +1,106 @@
+@charset "UTF-8";
+
+* {
+    box-sizing: border-box;
+    border-radius: 20px 0;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+}
+body {
+    background-color: cadetblue;
+}
+header {
+    height: 70px;
+    background-color: aquamarine;
+    padding: 18px;
+    border-bottom: 1px solid black;
+    border-radius: 0;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+}
+h1 {
+    font-size: 36px;
+}
+main {
+    max-width: 1000px;
+    margin: auto;
+    background-color: antiquewhite;
+    padding: 15px;
+    border: 1px solid black;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+}
+section {
+    background-color: white;
+    border: 1px solid black;
+    padding: 20px;
+    margin-bottom: 10px;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+}
+h2 {
+    margin: 8px;
+}
+dd {
+    margin-left: 30px;
+}
+ul {
+    list-style-type: none;
+}
+p {
+    margin: 8px;
+}
+.composto {
+    display: grid;
+    grid-template-areas: "article aside";
+    grid-template-columns: 1fr 300px;
+}
+article {
+    grid-area: article;
+    margin-right: 8px;
+}
+aside {
+    grid-area: aside;
+    border: 4px solid green;
+    background-color: black;
+    color: white;
+    padding: 14px;
+}
+.comentario {
+    color: yellowgreen;
+    text-align: center;
+    margin-top: 18px;
+}
+.explica {
+    margin: 0 0 10px 50px;
+}
+button, input, textarea {
+    border-radius: 5px;
+}
+#types {
+    margin: 6px;
+}
+.atributos {
+    border: 1px solid black;
+    margin-top: 15px;
+    padding: 8px 16px;
+    text-align: justify;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+}
+.atributos dt {
+    margin-top: 8px;
+}
+textarea {
+    padding: 8px;
+}
+select {
+    padding: 0 6px;
+}
+.desafio {
+    display: block;
+    margin-top: 12px;
+}
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    height: 18px;
+    border-radius: 0;
+}

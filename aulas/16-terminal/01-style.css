@@ -1,0 +1,48 @@
+@charset "UTF-8";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+body {
+  font-family: 'Courier New', Courier, monospace;
+  background-color: teal;
+}
+header {
+  background-color: aquamarine;
+  border-bottom: 1px solid;
+  box-shadow: 1px 1px 10px rgb(0, 0, 0, 0.4);
+  padding: 12px;
+}
+main {
+  background-color: white;
+  border: 1px solid;
+  margin: 8px auto 24px;
+  border-radius: 20px 0;
+  padding: 20px;
+  box-shadow: 1px 1px 10px rgb(0, 0, 0, 0.4);
+  max-width: 800px;
+}
+footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+h2, h3 {
+  padding: 12px;
+}
+main p {
+  margin: 0 0 12px 24px;
+}
+dt {
+  margin-left: 24px;
+}
+dd {
+  margin-left: 72px;
+}
+dd + dt {
+  margin-top: 12px;
+}

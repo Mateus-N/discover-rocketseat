@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Videos</title>
+    <style>
+        * {
+            font-family: 'Courier New', Courier, monospace;
+        }
+    </style>
+</head>
+<body>
+    <h1>Video e audio</h1>
+    <dl>
+        <dt> - src</dt>
+        <dt> - controls</dt>
+        <dt> - se não funcionar?</dt>
+        <dd> - fallback content</dd>
+        <dt> - source</dt>
+        <dd> - src</dd>
+        <dd> - type</dd>
+        <dt> - sobre serviços de terceiros</dt>
+    </dl>
+    <video controls preload="metadata" autoplay loop muted>
+        <source src="caminho/do/video.mp4" type="video/mp4">
+    </video>
+    <br>
+    <audio controls preload="metadata" autoplay loop muted>
+        <source src="caminho/do/audio.mp3" type="audio/mp3">
+    </audio>
+    <br>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/Media/Formats">Documentos "media type and format guide"</a>
+</body>
+</html>

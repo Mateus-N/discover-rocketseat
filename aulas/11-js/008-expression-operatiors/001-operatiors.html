@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>operatiors</title>
+  <link rel="stylesheet" href="001-style.css">
+</head>
+<body>
+  <script src="001-scripts-5.js"></script>
+  <header>
+    <h1>expressions and operators</h1>
+  </header>
+  <main>
+    <h2>Script 1</h2>
+    <dl>
+      <dt> - expressions</dt>
+      <dd> { let number }</dd>
+      <dd> * toda linha de código de define algo</dd>
+      <dd> * pode ou não terminar com ; , é facultativo</dd>
+      <dt> - operators</dt>
+      <dd> - binary</dd>
+      <dd> - unary</dd>
+      <dd> - ternary</dd>
+    </dl>
+    <h3>new</h3>
+    <ul>
+      <li> * left-hand-side expression</li>
+      <li> * criar novo objeto</li>
+    </ul>
+    <h3>unary operator</h3>
+    <ul>
+      <li> * typeof</li>
+      <li> * delete</li>
+    </ul>
+    <h2>Script 2</h2>
+    <h3>arithmetic operators</h3>
+    <ul>
+      <li> * multiplicação</li>
+      <li> / divisão</li>
+      <li> + soma</li>
+      <li> - subtração</li>
+      <br>
+      <li> % resto da divisão</li>
+      <li> ++ incremento</li>
+      <li> -- decremento</li>
+      <li> ** exponencial</li>
+    </ul>
+    <h2>Script 3</h2>
+    <h3>grouping operator</h3>
+    <p> () </p>
+    <h3>comparison operators</h3>
+    <p>irá comparar valores e retornar um Boolean como resposta à comparação</p>
+    <ul>
+      <li> == igual a</li>
+      <li> != diferente de</li>
+      <br>
+      <li> === estritamente igual</li>
+      <li> !== estritamente diferente</li>
+      <li>além de comparar o valor compara o tipo</li>
+      <br>
+      <li> &gt; maior que</li>
+      <li> &gt;= maior ou igual a</li>
+      <li> &lt; menor que</li>
+      <li> &lt;= menor ou igual a</li>
+    </ul>
+    <h2>Script 4</h2>
+    <h3>assignment</h3>
+    <dl>
+      <dt>assignment</dt>
+      <dd>x = 1</dd>
+      <dt>addition assignment</dt>
+      <dd>x += 2</dd>
+      <dt>subtraction assignment</dt>
+      <dd>x -= 2</dd>
+      <dt>multiplication assignment</dt>
+      <dd>x *= 2</dd>
+      <dt>division assingment</dt>
+      <dd>x /= 2</dd>
+    </dl>
+    <h3>logical operators</h3>
+    <p>Dois valores boolean que quando verificados resultam em verdadeiro ou falso</p>
+    <ul>
+      <li> && and</li>
+      <li> || or</li>
+      <li> ! not (inverte)</li>
+    </ul>
+    <h2>Script 5</h2>
+    <h3>ternary</h3>
+    <p>Dependendo da condição recebemos valores diferentes</p>
+    <dl>
+      <dt>condição então valor 1 se não valor 2</dt>
+      <dd> condition ? value1 : value2</dd>
+    </dl>
+    <h3>string operator</h3>
+    <ul>
+      <li> * comparison</li><br>
+      <li> * concatenation</li>
+      <li>retorna a união de duas strings</li>
+    </ul>
+    <h3>FALSY and TRUTHY</h3>
+    <p><strong>FALSY:</strong> Quando um valor é considerado false em contextos onde um boolean é obrigatório (condicionais e loops)</p>
+    <ul>
+      <li> - false</li>
+      <li> - 0</li>
+      <li> - -0</li>
+      <li> - ""</li>
+      <li> - null</li>
+      <li> - undefined</li>
+      <li> - NaN</li>
+    </ul>
+    <p><strong>TRUTHY:</strong> Quando um valor é considerado true em contextos onde um boolean é obrigatório (condicionais e loops)</p>
+    <ul>
+      <li>true</li>
+      <li>{}</li>
+      <li>[]</li>
+      <li>1</li>
+      <li>3.23</li>
+      <li>"0"</li>
+      <li>"false"</li>
+      <li>-1</li>
+      <li>Infinity</li>
+      <li>-Infinity</li>
+    </ul>
+    <h3>operator precedence</h3>
+    <table>
+      <caption><strong>precedência de operadores</strong></caption>
+      <tr class="linhainpar">
+        <th> * grouping</th>
+        <td> ( ) </td>
+      </tr>
+      <tr class="linhapar">
+        <th> * negação e incremento</th>
+        <td> ! ++ -- </td>
+      </tr>
+      <tr class="linhainpar">
+        <th> * multiplicação e divisão</th>
+        <td> * / </td>
+      </tr>
+      <tr class="linhapar">
+        <th> * adição e subtração</th>
+        <td> + - </td>
+      </tr>
+      <tr class="linhainpar">
+        <th> * relacional</th>
+        <td> &lt; &lt;= &gt; &gt;= </td>
+      </tr>
+      <tr class="linhapar">
+        <th> * igualdade</th>
+        <td> == != === !== </td>
+      </tr>
+      <tr class="linhainpar">
+        <th> * AND</th>
+        <td> && </td>
+      </tr>
+      <tr class="linhapar">
+        <th> * OR</th>
+        <td> || </td>
+      </tr>
+      <tr class="linhainpar">
+        <th> * condicional</th>
+        <td> ?:</td>
+      </tr>
+      <tr class="linhapar">
+        <th> * assignment</th>
+        <td> = += -= *=</td>
+      </tr>
+    </table>
+  </main>
+  <footer>
+    <p>Made by Mateus Nunes</p>
+  </footer>
+</body>
+</html>

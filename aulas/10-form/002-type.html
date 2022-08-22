@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Type</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>&lt;input type=""&gt;</h1>
+    </header>
+    <main>
+        <section class="atributos">
+            <h2>Atributos comuns</h2>
+            <dl>
+                <dt> - type</dt>
+                <dd> - define o tipo de dado que será recebido pela tag input (obrigatório)</dd>
+                <dt> - autocomplete</dt>
+                <dd> - busca informações no histórico de uso do navegador para sugerir respostas (muito usado e recomendado)</dd>
+                <dt> - autofocus</dt>
+                <dd> - chamado de atributo booleano, coloca apenas o atributo</dd>
+                <dd> - quando for carregada a página o cursor e o foco da página irão nesse elemento</dd>
+                <dd> - apenas um por página, caso tenha mais de um será usado apenas o primeiro</dd>
+                <dt> - disabled</dt>
+                <dd> - atributo booleano, desabilita o campo</dd>
+                <dt> - value</dt>
+                <dd> - conteúdo que inicialmente irá aparecer no campo</dd>
+                <dt> - readonly <strong>(funciona em quase todos)</strong></dt>
+                <dd> - booleano, semelhante ao disabled mas com aspecto diferente</dd>
+                <dt> - form <strong>(funciona em quase todos)</strong></dt>
+                <dd> - link o input a algum formulário</dd>
+                <dt> - name</dt>
+                <dd> - nome do input, obrigátorio caso use o form</dd>
+                <dt> - required <strong>(funciona em quase todos)</strong></dt>
+                <dd> - booleano, quando enviar o formulário esse campo será obrigatório</dd>
+                <dt> - placeholder <strong>(funciona em quase todos</strong></dt>
+                <dd> - texto de fundo no campo, <strong>não substítui o label</strong></dd>
+            </dl>
+        </section>
+        <section class="atributos">
+            <h2>&lt;input type="password"&gt;</h2>
+            <ul>
+                <li> - collocar senha de maneira segura</li>
+                <li> - esconde o que está sendo digitado no campo</li>
+                <li> - o estilo da apresentação do campo depende do User Agent</li>
+            </ul>
+            <h3>Atributos</h3>
+                <dl>
+                    <dt> - minlength / maxlength</dt>
+                    <dd> * o número mínimo e/ou máximo de caracteres para este campo</dd>
+                    <dt> - size</dt>
+                    <dd> * o número aceitavél de caracteres que esse campo deverá conter</dd>
+                    <dt> - pattern</dt>
+                    <dd> * expressão angular para validar o que está sendo digitado no campo</dd>
+                    <dd> * altamente recomendado o uso de um padrão de segurança alta de senhas</dd>
+                    <dd> * exemplo: queremos que a senha contenha caracteres hexadecimais com o limite de no mínimo 4 e no máximo 8 caracteres</dd>
+                    <dd><strong>* pattern="[0-9a-fA-F]{4,8}</strong></dd>
+                    <dt> - placeholder</dt>
+                    <dd> * mostra um exemplo de texto a ser digitado no campo</dd>
+                    <dt> - readonly / disabled</dt>
+                    <dd> * atributo booleano indicando se o campo está habilitado ou não</dd>
+                    <dt> - required</dt>
+                    <dd> * o campo será obrigatório</dd>
+                    <dt> - inputmode</dt>
+                    <dd> * poderá alterar o uso do teclado em smartphones</dd>
+                    <dd> * exemplo: queremos que o cliente adicione apenas números</dd>
+                    <dd><strong>* inputmode="numeric"</strong></dd>
+                    <dt> - autocomplete</dt>
+                    <dd> * on: permite a sugestão de: new-password ou current-password</dd>
+                    <dd> * off: desabilita a opção de autocompletar</dd>
+                    <dd> * new-password: o navegador poderá sugerir uma nova senha</dd>
+                </dl>
+                <h2>Prática</h2>
+            <aside>
+                <form action="">
+
+                    <input
+                    type="password"
+                    minlength="4"
+                    maxlength="8"
+                    pattern="[0-9a-fA-F]{4,8}"
+                    title="Coloque HEX no mínimo 4 caracteres e no máximo 8 caracteres"
+                    placeholder="coloque sua senha"
+                    required
+                    autocomplete="new-password"
+                    >
+                    <button type="submit">Enviar</button>
+
+                </form>
+            </aside>
+        </section>
+        <section class="atributos">
+            <h2>&lt;input type="email"&gt;</h2>
+            <ul>
+                <li> - espera que o usuário digite um email</li>
+                <li> - irá validar se o valor digitado é um email</li>
+            </ul>
+            <h3>Atributos</h3>
+            <dl>
+                <dt> - placeholder</dt>
+                <dt> - readonly / disabled</dt>
+                <dt> - value</dt>
+                <dt> - required</dt>
+                <dt> - multiple</dt>
+                <dd> * boolean, o campo irá receber um ou mais email separador por vírgulas</dd>
+                <dt> - minlength / maxlength</dt>
+                <dd> * o mínimo e/ou máximo valor que o campo irá conter</dd>
+                <dt> - size</dt>
+                <dd> * valor númerico indicando quantos caracteres esse campo deveria conter, modificando o tamanho do campo para o usuário</dd>
+                <dt> - pattern</dt>
+                <dd> * uso de expressão regular para validar o campo</dd>
+                <dd> * exemplo: o usuário só poderá colocar email do domínio rocketseat.com.br</dd>
+                <dd><strong> * pattern=".+@rocketseat\.com\.br"</strong></dd>
+                <dt> - list</dt>
+                <dd> * o id de uma tag &lt;datalist&gt; que está no mesmo documento</dd>
+                <dd> * &lt;datalist&gt; irá conter uma lista de valores pré definidos a fim de sugerir ao usuário, quais valores estão disponíveis</dd>
+                <dd> * os valores do &lt;datalist&gt; que não forem compatíveis com o campo, não serão apresentado como sugestão</dd>
+            </dl>
+            <h2>Prática</h2>
+            <aside>
+                <form action="">
+
+                    <input type="email"
+                    placeholder="email@rocketseat.com.br"
+                    pattern=".+rocketseat\.com\.br"
+                    title="somente emails rocketseat.com.br serão aceitos"
+                    required
+                    multiple
+                    minlength="8"
+                    maxlength="255"
+                    >
+
+                    <button type="submit">Enviar</button>
+                </form>
+            </aside>
+        </section>
+        <section class="atributos">
+            <h2>&lt;input type="url"&gt;</h2>
+            <ul>
+                <li> - espera que o usuário digite uma url</li>
+                <li> - irá validar se o valor digitado é uma url</li>
+            </ul>
+            <h3>Atributos</h3>
+            <dl>
+                <dt> - placeholder</dt>
+                <dt> - readonly / disabled</dt>
+                <dt> - value</dt>
+                <dt> - required</dt>
+                <dt> - minlegth / maxlength</dt>
+                <dd> * o mínimo e/ou máximo valor que o campo irá conter</dd>
+                <dt> - size</dt>
+                <dd> * o valor numérico indicando quantos caracteres esse campo deveria conter, modificando o tamanho do campo para o usuário</dd>
+                <dt> - pattern</dt>
+                <dd> * uso de expressão regular para validar o campo</dd>
+                <dd> * exemplo: o usuário só poderá colocar domíniom.com.br</dd>
+                <dd><strong> * pattern=".*\.com\.br\/.*"</strong></dd>
+                <dt> - list</dt>
+                <dd> * o id de uma tag &lt;datalist&gt; que está no mesmo documento</dd>
+                <dd> * &lt;datalist&gt; irá conter uma lista de valores pré definidos a fim de sugerir ao usuário, quais valores estão disponíveis</dd>
+                <dd> * os valores do &lt;datalist&gt; que não forem compatíveis com o campo, não serão apresentado como sugestão</dd>
+                <dt> - spellcheck</dt>
+                <dd> * habilitar a verificação ortigráfica para esse input</dd>
+            </dl>
+            <h2>Prática</h2>
+            <aside>
+                <form action="">
+                    <input type="url"
+                    placeholder="http://example.com.br"
+                    pattern=".*\.com\.br\.*"
+                    size="22"
+                    required
+                    >
+                    <button type="submit">Enviar</button>
+                </form>
+            </aside>
+        </section>
+        <section class="atributos">
+            <h2>&lt;input type="file"&gt;</h2>
+            <ul>
+                <li> - usuário poderá escolher um ou mais arquivos para enviar no formulário</li>
+            </ul>
+            <h3>Atributos</h3>
+            <dl>
+                <dt> - value</dt>
+                <dd> * contém o arquivo a ser enviado</dd>
+                <dt> - accept</dt>
+                <dd> * descreve que tipos de arquivos serão aceitos</dd>
+                <dd> * exemplo: .doc, .docx, .pdf, .audio/*, .image/png, .png</dd>
+                <dt> - files</dt>
+                <dd> * a lista de arquivo ou arquivos</dd>
+                <dt> - multiple</dt>
+                <dd> * boolean, permite o envio de multiplos arquivos</dd>
+            </dl>
+            <h3>Envio dos arquivos</h3>
+            <p>Para envio dos arquivos o formulário deverá utilizar o método POST e o atributo enctype como <strong>"multipart/form-data"</strong></p>
+            <h2>Prática</h2>
+            <aside>
+                <form action="" method="post" exctype="multipart/form-data">
+                    <input type="file"
+                    accept="image/*"
+                    multiple
+                    >
+                </form>
+            </aside>
+        </section>
+        <section class="atributos">
+            <h2>&lt;input type="color"&gt;</h2>
+            <ul>
+                <li> - interface para selecionar cor</li>
+                <li> - color picker</li>
+            </ul>
+            <h3>Atributos</h3>
+            <dl>
+                <dt> - value: RGB</dt>
+                <dd> * se inválido será exibido preto</dd>
+                <dt> - list</dt>
+                <dd> * o id de uma tag &lt;datalist&gt; que está no mesmo documento</dd>
+                <dd> * &lt;datalist&gt; irá conter uma lista de valores pré definidos a fim de sugerir ao usuário, quais valores estão disponíveis</dd>
+                <dd> * os valores do &lt;datalist&gt; que não forem compatíveis com o campo, não serão apresentado como sugestão</dd>
+            </dl>
+            <h2>Prática</h2>
+            <aside>
+                <form action="">
+                    <input type="color" list="colorsdata">
+                </form>
+                <datalist id="colorsdata">
+                    <option>#ff0000</option>
+                    <option>#00ff00</option>
+                    <option>#0000ff</option>
+                </datalist>
+            </aside>
+        </section>
+        <section class="atributos">
+            <h2>&lt;input type="checkbox"&gt;</h2>
+            <ul>
+                <li> - caixas que podem ser marcadas</li>
+                <li> - selecionar um valor para ser enviado</li>
+                <li> - se não selecionado, não será enviado nenhum dado</li>
+            </ul>
+            <h3>Atributos</h3>
+            <dl>
+                <dt> - globais</dt>
+                <dt> - value</dt>
+                <dd> * valor que aquele camplo contém</dd>
+                <dd> * se não estiver presente, o padrão é 'on'</dd>
+                <dt> - checked</dt>
+                <dt> * boolean, para deixar o campo marcado por padrão</dt>
+            </dl>
+            <h2>Prática</h2>
+            <aside>
+                <form action="">
+                    <label for="subscribe">Receber notificações</label>
+                    <input type="checkbox" name="subscribe" id="subscribe" checked>
+                </form>
+            </aside>
+            <h2>Marcar multiplos valores?</h2>
+            <p> - usaremos o atributo 'name' com o mesmo nome para diversos campos</p>
+            <h2>Prática</h2>
+            <aside>
+                <fieldset>
+                    <legend>Choose your interests</legend>
+                    <div>
+                        <input type="checkbox" id="coding" name="interest" value="coding" checked>
+                        <label for="coding">Coding</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="music" name="interest" value="music">
+                        <label for="music">Music</label>
+                    </div>
+                </fieldset>
+            </aside>
+        </section>
+        <section class="atributos">
+            <h2>&lt;input type="hidden"&gt;</h2>
+            <ul>
+                <li> - invisível ao usuário</li>
+                <li> - será enviado com o formulário</li>
+                <li> - não receberá foco</li>
+                <li> - leitores de tela não recebem esse campo</li>
+                <li><strong> - &lt;input type="hidden" id="timestamp" name="timestamp" value="21321561651"&gt;</strong></li>
+            </ul>
+        </section>
+        <section class="atributos">
+            <h2>&lt;input type="radio"&gt;</h2>
+            <p> - projetado para escolher uma única opção de um grupo de opções</p>
+            <h3>Atributos essenciais</h3>
+            <dl>
+                <dt> - checked</dt>
+                <dd> * indica que o campo foi marcado</dd>
+                <dt> - value</dt>
+                <dd> * valor que aquele camplo contém</dd>
+            </dl>
+            <h2>Prática</h2>
+            <aside>
+                <fieldset>
+
+                    <legend>Vamos tomar um café?</legend>
+                    <label for="sim">Sim</label>
+                    <input type="radio" id="sim" name="coffee" value="yes">
+
+                    <label for="nao">Não</label>
+                    <input checked type="radio" id="nao" name="coffee" value="no">
+
+                </fieldset>
+            </aside>
+        </section>
+        <section class="atributos">
+            <h2>&lt;input type="search"&gt;</h2>
+            <ul>
+                <li> - para campos de busca</li>
+                <li> - é igual ao campo de tipo 'text' mas poderá ser um pouco diferente dependendo do user agent</li>
+            </ul>
+            <h3>Atributos</h3>
+            <ul>
+                <li> - list / &lt;datalist&gt;</li>
+                <li> - pattern</li>
+                <li> - aria-label</li>
+            </ul>
+            <h2>Prática</h2>
+            <aside>
+                <form>
+                    <input type="search" name="q" list="searchterms" placeholder="pesquisar" aria-label="Campo de pesquisa">
+                    <button type="submit">Pesquisar</button>
+                    <datalist id="searchterms">
+                        <option>MAC</option>
+                        <option>Windows</option>
+                        <option>Linux</option>
+                    </datalist>
+                </form>
+                <form>
+                    <label for="id">Pesquisar pelo ID</label>
+                    <input type="search" name="id" id="id" pattern="[0-9]{2}" title="Numero do ID">
+                    <button type="submit">Pesquisar</button>
+                </form>
+            </aside>
+        </section>
+        <section class="atributos">
+            <h2>&lt;input type="number"&gt;</h2>
+            <p> - entrada de números</p>
+            <h3>Atributos</h3>
+            <ul>
+                <li> - min/max</li>
+                <li> - step</li>
+            </ul>
+            <h2>Prática</h2>
+            <aside>
+                <form action="">
+                    <input type="number" min="2" max="10">
+                    <button>Enviar</button>
+                </form>
+            </aside>
+        </section>
+        <section class="atributos">
+            <h2>&lt;input type="range"&gt;</h2>
+            <ul>
+                <li> - controle para selecionar um valor númerico</li>
+                <li> - slider</li>
+            </ul>
+            <h3>Atributos</h3>
+            <ul>
+                <li> - min/max</li>
+                <li> - step</li>
+            </ul>
+            <h2>Prática</h2>
+            <aside>
+                <input type="range" min="1" max="100" value="50" step="1">
+            </aside>
+        </section>
+    </main>
+    <footer>
+        <p>Feito por Mateus Nunes</p>
+    </footer>
+</body>
+</html>

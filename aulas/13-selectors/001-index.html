@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Selectors</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Selectors</h1>
+    <nav>
+      <a href="#" id="atual">Selectors</a>
+      <a href="pseudo-class.html">Pseudo-class</a>
+      <a href="pseudo-element.html">Pseudo-element</a>
+    </nav>
+  </header>
+  <main>
+    <h2>Seletores</h2>
+    <p>Conecta um elemento HTML com o CSS a fim de alterar o elemento.</p>
+    <h3>Tipos</h3>
+    <dl>
+      <dt> * Element selector</dt>
+      <dd> - Todos os elementos HTML</dd>
+      <dt> * ID selector</dt>
+      <dd> - Um elemento que tenha um atributo `id`</dd>
+      <dd> - Cada ID deverá ser único</dd>
+      <dt> * Class selector</dt>
+      <dd> - Os elementos que contenham um atributo `class`</dd>
+      <dd> - Podemos ter uma ou mais classes</dd>
+      <dt> * Attribute selector</dt>
+      <dd> - Um elemento que tenha um atributo específico</dd>
+      <dt> * Pseudo-class selector</dt>
+      <dd> - Elementos em um estado específico</dd>
+    </dl>
+    <h3>Múltiplos</h3>
+    <p>Você poderá selecionar múltiplos elementos e aplicar alguma regra CSS para todos eles. A separação deve ser feita por vírgula</p>
+    <article>
+      <h2>Combinators</h2>
+      <p>Combinadores, pois eles trabalham para buscar e combinar seletores a fim de aplicar uma estilização</p>
+      <h3>Descendant combinator</h3>
+      <ul>
+        <li>Identificado por um espaço entre os seletores.</li>
+        <li>Busca um elemento dentro do outro</li>
+        <li>Não importa que tenham outras tags no meio do caminho</li>
+      </ul>
+      <p>body article h2</p>
+    </article>
+    <article>
+      <h2>Child combinator</h2>
+      <ul>
+        <li>Identificado pelo sinal `&gt;` entre dois seletores</li>
+        <li>Seleciona somente o elemento que é filho direto do pai</li>
+        <li>Elementos depois do filho direto serão desconsiderados</li>
+      </ul>
+      <p>body &gt; ul &gt; li</p>
+    </article>
+    <article>
+      <h2>Adjacent sibling combinator</h2>
+      <ul>
+        <li>Identificado pelo sinal `+` entre dois seletores</li>
+        <li>Seleciona somente o elemento do lado direto que é irmão direto na hierarquia</li>
+        <li>Apenas o primeiro irmão</li>
+      </ul>
+      <p>h1 + p</p>
+    </article>
+    <article>
+      <h2>General sibling combinator</h2>
+      <ul>
+        <li>Idenficado pelo sinal `~` entre dois seletores</li>
+        <li>Seleciona todos os elementos irmãos</li>
+      </ul>
+      <p>h1 ~ p</p>
+    </article>
+    <article>
+      <h2>Utilizando combinadores</h2>
+      <p>ul &gt; li[class="red"]</p>
+      <h3>Dica</h3>
+      <ul>
+        <li>Seletores muito específicos tendem a causar dificuldades no reuso das regras de estilização dos elementos</li>
+        <li>Muitas vezes, um simples uso de classes, torna o trabalho muito mais eficiente</li>
+      </ul>
+    </article>
+  </main>
+  <footer>
+    <p>Made by Mateus Nunes</p>
+  </footer>
+</body>
+</html>

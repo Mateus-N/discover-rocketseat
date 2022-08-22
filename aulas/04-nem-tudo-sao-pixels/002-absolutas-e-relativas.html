@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Absolutas e relativas</title>
+    <style>
+        * {
+            font-family: 'Courier New', Courier, monospace;
+        }
+        table {
+            padding-left: 10px;
+        }
+        col {
+            background-color: aqua;
+        }
+        td, th {
+            padding: 4px;
+            border: 1px solid black;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Distâncias</h1>
+    <h2>absolutas &lt;length&gt;</h2>
+    <p>São fixas e não podem alterar seu valor</p>
+    <table>
+        <colgroup>
+            <col>
+            <col>
+            <col>
+        </colgroup>
+        <tr>
+            <th>Unidade</th>
+            <th>Nome</th>
+            <th>Equivalência</th>
+        </tr>
+        <tr>
+            <td>cm</td>
+            <td>Centímetros</td>
+            <td>1cm = 96px/2.54</td>
+        </tr>
+        <tr>
+            <td>in</td>
+            <td>Inches (polegadas)</td>
+            <td>1in = 2.54cm = 96px</td>
+        </tr>
+        <tr>
+            <td>px</td>
+            <td>Pixels</td>
+            <td>1px = 1/96th of lin</td>
+        </tr>
+    </table>
+    <ul>
+        <li>O mais comum e mais utilizado é o **px**</li>
+        <li>Não recomendado usar cm</li>
+    </ul>
+    <h2>Relativas</h2>
+    <p>São relativas a algum outro valor, pode ser o elemento pai, ou root, ou o tamanho da tela</p>
+    <p>* Benefício: Maior adaptação aos diferentes tipo de tela</p>
+    <table>
+        <colgroup>
+            <col>
+            <col>
+        </colgroup>
+        <tr>
+            <th>Unidade</th>
+            <th>Relativo a</th>
+        </tr>
+        <tr>
+            <td>em</td>
+            <td>Tamanho da fonte pai (1em = 100%)</td>
+        </tr>
+        <tr>
+            <td>rem</td>
+            <td>Tamanho da fonte do elemento raiz (root/html = 16px)</td>
+        </tr>
+        <tr>
+            <td>vw</td>
+            <td>1% da viewport width</td>
+        </tr>
+        <tr>
+            <td>vh</td>
+            <td>1% da viewport height</td>
+        </tr>
+    </table>
+</body>
+</html>

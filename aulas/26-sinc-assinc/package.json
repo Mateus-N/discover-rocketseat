@@ -1,0 +1,21 @@
+{
+  "name": "26-sinc-assinc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "callbacks": "echo \"Error: no test specified\" && exit 1",
+    "node": "echo \"Error: no test specified\" && exit 1",
+    "promise": "echo \"Error: no test specified\" && exit 1",
+    "axios": "echo \"Error: no test specified\" && exit 1",
+    "promise-all": "echo \"Error: no test specified\" && exit 1",
+    "assinc-await": "echo \"Error: no test specified\" && exit 1",
+    "axios-await": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.27.2"
+  }
+}

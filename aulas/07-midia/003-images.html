@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Images</title>
+    <style>
+        * {
+            font-family: 'Courier New', Courier, monospace;
+        }
+        ul {
+            list-style-type: none;
+        }
+        img {
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <h1>&lt;img&gt;</h1>
+    <ul>
+        <li> - src</li>
+        <li> - alt</li>
+        <li> - title</li>
+        <li> - width</li>
+        <li> - height</li>
+        <li> - adicionando link</li>
+    </ul>
+    <img src="https://source.unsplash.com/random" alt="Imagem"
+    title="imagem aleatória">
+    <h2>Incluir com background-image</h2>
+    <ul>
+        <li> - com o atributo style</li>
+        <li> - somente para estilo</li>
+        <li> - não é semântico e falta significado</li>
+    </ul>
+    <h2>Criando títulos visíveis para as imagens</h2>
+    <p>&lt;figure&gt; e &lt;figcaption&gt;</p>
+    <figure>
+        <img src="https://source.unsplash.com/random" alt="Imagem"
+        title="imagem aleatória">
+        <figcaption>Título da imagem</figcaption>
+    </figure>
+    <h2>SVG &lt;svg&gt;</h2>
+    <p>É uma marcação, estilo html, mas não é para textos, e sim para fazer imagens.<br>
+    Possuimos elementos para gerar formas.</p>
+    <p>Para entender melhor<br>
+     - Imagem rasterizada x Imagem vetorizada</p>
+    <dl>
+        <dt>Benefícios</dt>
+        <dd> - mais leve</dd>
+        <dd> - mais detalhada</dd>
+        <dd> - maior acessibilidade e SEO</dd>
+        <dd> - pode ser editada via CSS ou atributos</dd>
+        <dt>Desvantagens</dt>
+        <dd> - Pode ser mais complicada de trabalhar</dd>
+        <dd> - Quanto mais complexa a imagem, mais trabalho para o navegador</dd>
+        <dd> - Navegadores mais antigos não possuem suporte para essa tag</dd>
+    </dl>
+    <p>Para fotografias, ainda prefira usar imagens rasterizadas.</p>
+</body>
+</html>

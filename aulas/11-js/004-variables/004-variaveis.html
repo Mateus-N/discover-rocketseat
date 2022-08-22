@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Variáveis</title>
+  <link rel="stylesheet" href="004-style.css">
+</head>
+<body>
+  <script src="004-scripts.js"></script>
+  <header>
+    <h1>Variáveis</h1>
+  </header>
+  <main>
+    <h2>var</h2>
+    <dl>
+      <dt> * nome simbólicos para receber algum valor</dt>
+      <dt> * atalhos de código</dt>
+      <dt> * identificadores</dt>
+      <dt> * 3 palavras reservadas para criar uma variável</dt>
+      <dd> * var</dd>
+      <dd> * let</dd>
+      <dd> * const</dd>
+    </dl>
+    <section>
+      <h2>tipos</h2>
+      <ul>
+        <li> * o JS é uma linguagem fracamente tipada e dinâmica</li>
+        <li> * variáveis não precisam ter um tipo previamente definido</li>
+        <li> * podemos mudar o conteúdo da variável</li>
+      </ul>
+    </section>
+    <section>
+      <h2>scope</h2>
+      <p> * escopo determina a visibilidade de alguma variável no JS</p>
+      <h3>block statement</h3>
+      <div class="js">
+        <ul>
+          <li>```js</li>
+          <li class="comentario">// vamos iniciar um bloco</li>
+          <li>{</li>
+          <li class="comentario"> // aqui dentro é um bloco e posso colocar qualquer código</li>
+          <li>}</li>
+          <li class="comentario"> // aqui fechamos o bloco</li>
+          <li>```</li>
+        </ul>
+      </div>
+      <p>o bloco, também vai criar um novo escopo. chamamos de `block-scoped`</p>
+      <h3> * var</h3>
+      <p> * var é global e poderá funcionar fora de um escopo de bloco (hoisting)</p>
+      <h3> * let e const</h3>
+      <p> * let e const são locais e só funcionam no escopo onde foram criadas e apenas após de ser declarada a função</p>
+      <p> * caso a variável tenha sido declarada anteriormente ao bloco utilizando 'let' e dentro do bloco tenha sido alterada, a alteração se torna global</p>
+      <p> * caso a variável tenha sido criada com const ela não poderá ser alterada mesmo que dentro do bloco para escopo local, porém, pode ser criada uma nova variável com o mesmo nome que irá funcionar apenas dentro do bloco</p>
+    </section>
+    <section>
+      <h2>variables-names</h2>
+      <dl>
+        <dt> * JS é case-sensitive (sensível ao caso)</dt>
+        <dt> * JS aceita cadeia de caracteres Unicode</dt>
+        <br>
+        <dt> - posso:</dt>
+        <dd> * iniciar com esses caracteres especiais: $ _</dd>
+        <dd> * iniciar com letras</dd>
+        <dd> * colocar acentos</dd>
+        <dd> * letras maíusculas e  minúsculas fazem diferança</dd>
+        <br>
+        <dt> - não posso:</dt>
+        <dd> * iniciar com números</dd>
+        <dd> * colocar espaços  vazios no nome</dd>
+        <br>
+        <dt> - ideal</dt>
+        <dd> * criar nomes que fazem sentido</dd>
+        <dd> * que explique o que a variável é ou faz</dd>
+        <dd> * camelCase</dd>
+        <dd> * snake_case</dd>
+        <dd> * escrever em inglês</dd>
+      </dl>
+    </section>
+  </main>
+  <footer>
+    <p>Feito por Mateus Nunes</p>
+  </footer>
+</body>
+</html>

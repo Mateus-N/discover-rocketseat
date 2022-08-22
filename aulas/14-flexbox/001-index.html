@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>flexbox</title>
+  <link rel="stylesheet" href="001-style.css">
+</head>
+<body>
+  <header>
+    <h1>flexbox</h1>
+  </header>
+  <main>
+    <h2>Layouts e evolução</h2>
+    <p>Layout tem a ver com a maneira que os elementos estão distribuidos na tela</p>
+    <h3>Normal flow</h3>
+    <p>Ou flow layout é a maneira que os elementos `block` e `inline` ficam na página</p>
+    <h3>table</h3>
+    <p>É a maneira de tabelas onde os a tag `table` recebe um display `table` fazendo com que os elementos internos como `td` e `tr` possam ser usados para montar uma tabela</p>
+    <h3>tabless</h3>
+    <p>Uso das propriedades `float` e `clear` para que os elementos possam mudar de posição na tela</p>
+    <aside>
+      <dl>
+        <dt>&lt;div style="float: left"&gt;</dt>
+        <dd>esquerda</dd>
+        <dt>&lt;/div&gt;</dt>
+        <dt>&lt;div style="float: right"&gt;</dt>
+        <dd>direita</dd>
+        <dt>&lt;/div&gt;</dt>
+        <dt>&lt;div style="clear: both"&gt;</dt>
+        <dd>normal</dd>
+        <dt>&lt;/div&gt;</dt>
+      </dl>
+    </aside>
+    <h3>flexbox</h3>
+    <p>A caixa se torna flex, fazendo com que os elementos internos possam receber melhor:</p>
+    <ul>
+      <li>Alinhamento</li>
+      <li>Ordenação</li>
+      <li>Tamanhos flexíveis</li>
+    </ul><br>
+    <p><strong>display: flex</strong></p>
+    <article>
+      <h2>Terminologia</h2>
+      <dl>
+        <dt>flex container</dt>
+        <dd>caixa que tem elementos dentro</dd>
+        <dt>flex item</dt>
+        <dd>item que está dentro do container flex</dd>
+        <dt>nesting</dt>
+        <dd>elementos que vivem dentro de outro elemento</dd>
+        <dt>axis</dt>
+        <dd>ideia de eixo</dd>
+        <dd><strong>main:</strong> por padrão eixo principal - horiontal</dd>
+        <dd><strong>cross:</strong> por padrão eixo secundário - vertical</dd>
+        <dt>flex-sizing</dt>
+        <dd>item flexível</dd>
+        <dd>altera width/height dos itens para preenchimento dos espaços do flex container</dd>
+      </dl>
+    </article>
+    <h2>Propriedades do Flex Container</h2>
+    <dl>
+      <dt>Direção dos itens</dt>
+      <dt>Multi linhas</dt>
+      <dt>Alinhamento</dt>
+      <dd>Principal</dd>
+      <dd>Cruzado</dd>
+      <dt>Escpaços entre os itens</dt>
+    </dl>
+    <h3>Direção dos itens</h3>
+    <ul>
+      <li>Flex é uma dimensão (horizontal ou vertical)</li>
+      <li>Podemos mudar a direção com `flex-direction`</li>
+      <li>Valores: (row | row-reverse | column | column reverse)</li>
+    </ul>
+    <aside id="container1">
+      <div class="item">A</div>
+      <div class="item">B</div>
+      <div class="item">C</div>
+    </aside>
+    <h3>flex-wrap</h3>
+    <ul>
+      <li>Podemos usar multi linhas</li>
+      <li>Cada nova linha, um novo flex container</li>
+    </ul>
+    <aside id="container2">
+      <div class="item2">A</div>
+      <div class="item2">B</div>
+      <div class="item2">C</div>
+    </aside>
+    <h3>flex-flow</h3>
+    <ul>
+      <li>shorthand</li>
+      <li>flex-direction || flex-wrap</li>
+    </ul>
+    <aside id="container3">
+      <div class="item3">A</div>
+      <div class="item3">B</div>
+      <div class="item3">C</div>
+    </aside>
+    <h3>justify-content</h3>
+    <ul>
+      <li>Alinhamento dos elementos dentro do container</li>
+      <li>Distribuição dos elementos</li>
+    </ul>
+    <h3>valores</h3>
+    <ul>
+      <li>flex-start</li>
+      <li>flex-end</li>
+      <li>center</li>
+    </ul>
+    <h3>* space-around</h3>
+    <aside id="container4">
+      <div class="item4">A</div>
+      <div class="item4">B</div>
+      <div class="item4">C</div>
+      <div class="item4">D</div>
+    </aside>
+    <h3>* space-between</h3>
+    <aside id="container5">
+      <div class="item5">A</div>
+      <div class="item5">B</div>
+      <div class="item5">C</div>
+      <div class="item5">D</div>
+    </aside>
+    <h3>* space-evenly</h3>
+    <aside id="container6">
+      <div class="item6">A</div>
+      <div class="item6">B</div>
+      <div class="item6">C</div>
+      <div class="item6">D</div>
+    </aside>
+    <h3>align-items</h3>
+    <p>Alinhamento dos elementos no eixo cruzado</p>
+    <h3>valores</h3>
+    <ul>
+      <li>stretch (padrão)</li>
+      <li>flex-start</li>
+      <li>flex-end</li>
+      <li>center</li>
+    </ul>
+    <aside id="container7">
+      <div class="item7">A</div>
+      <div class="item7">B</div>
+      <div class="item7">C</div>
+      <div class="item7">D</div>
+    </aside>
+    <h3>gap</h3>
+    <p>Espaços entre os elementos</p>
+    <h3>valores</h3>
+    <ul>
+      <li>Unidades de medida</li>
+      <li>fixas: px, pt</li>
+      <li>flexíveis: %, em, rem</li>
+    </ul>
+    <aside id="container8">
+      <div class="item8">A</div>
+      <div class="item8">B</div>
+      <div class="item8">C</div>
+      <div class="item8">D</div>
+    </aside>
+    <h2>Propriedades para os itens</h2>
+    <ul>
+      <li>flex-basis</li>
+      <li>flex-grow</li>
+      <li>flex-shrink</li>
+      <li>flex</li>
+      <li>order</li>
+    </ul>
+    <h3>flex-basis</h3>
+    <aside id="container9">
+      <div class="item9">A</div>
+      <div class="item9">B</div>
+      <div class="item9">C</div>
+      <div class="item9">D</div>
+    </aside>
+    <h3>flex-grow</h3>
+    <p>O crescimento do icone dentro do container em relação aos espaços vazios</p>
+    <aside id="container10">
+      <div class="item10">A</div>
+      <div class="item10">B</div>
+      <div class="item10">C</div>
+      <div class="item10">D</div>
+    </aside>
+    <h3>flex-shrink</h3>
+    <p>A capacidade do item encolher dentro do container</p>
+    <aside id="container11">
+      <div class="item11">A</div>
+      <div class="item11">B</div>
+      <div class="item11">C</div>
+      <div class="item11">D</div>
+    </aside>
+    <h3>flex</h3>
+    <ul>
+      <li>shorthand</li>
+      <li>flex-grow flex-shrink- flex-basis</li>
+      <li>podem ter 1, 2 ou 3 valores</li>
+    </ul>
+    <aside>
+      <div class="page">
+        <div class="aside">Aside</div>
+        <div class="main">
+          main
+          <section>Content 1</section>
+          <section>Content 2</section>
+          <section>Content 3</section>
+        </div>
+      </div>
+    </aside>
+    <h3>order</h3>
+    <p>Altera a ordem dos elementos dentro da caixa de acordo com a ordem crescente do elemento order (padrão 0)</p>
+  </main>
+  <footer>
+    <p>Made by Mateus Nunes</p>
+  </footer>
+</body>
+</html>

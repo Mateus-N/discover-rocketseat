@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cascata</title>
+</head>
+<body>
+    <h1>A cascata (cascading)</h1>
+    <p>A escolha do browser de qual regra aplicar, caso hajam muitam regras para o mesmo elemento.</p>
+    <p>* Seu estilo é lido de cima pra baixo.</p>
+    <p>São levados em consideração 3 fatores</p>
+    <ol>
+        <li>Origem do estilo</li>
+        <li>Especificidade</li>
+        <li>Importância</li>
+    </ol>
+    <h2>Origem do estilo</h2>
+    <p>inline &gt; tag style &gt; tag link</p>
+    <h2>Especificidade</h2>
+    <p>É um cálculo matemático, onde , cada tipo de seletor e origem do estilo, possuem valores a serem considerados.</p>
+    <ul>
+        <li>0. Universal selector, combinators e negation pseudo-class (:not())</li>
+        <li>1. Element type selector e pseudo-elements (::before, ::after)</li>
+        <li>10. Classes e attribute selectors ([type="radio"])</li>
+        <li>100. ID selector</li>
+        <li>1000. Inline</li>
+    </ul>
+    <h3>Exemplos diversos:</h3>
+    <ul>
+        <li>h1 .class #id</li>
+        <li>body h1</li>
+        <li>body, body h1</li>
+    </ul>
+    <h2>A regra !important</h2>
+    <ul>
+        <li>* Cuidado, evite o uso</li>
+        <li>* Não é considerado uma boa prática</li>
+        <li>* Quebra o fluxo natural da cascata</li>
+    </ul>
+</body>
+</html>

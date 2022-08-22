@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Forms</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Formulários</h2>
+            <dl>
+                <dt>Para que serve?</dt>
+                <dd> - Capturar dados de entrada (input)</dd>
+                <dd> - Interação</dd>
+                <dd> - Controle</dd><br>
+                <dt>Pré requisitos</dt>
+                <dd> - Básico HTML</dd><br>
+                <dt>Dominar</dt>
+                <dd> - Estilização</dd>
+                <dd> - Validação</dd>
+                <dd> - Controles customizados</dd>
+                <dd> - Javascript</dd>
+            </dl>
+        </section>
+        <section class="composto">
+            <article>
+                <h2>&lt;form&gt;</h2>
+                    <ul>
+                        <li>* Elemento que definirá um formulário</li>
+                        <li>* É um container estilo &lt;section&gt; &lt;footer&gt;</li>
+                    </ul>
+                    <h3>Atributos básicos</h3>
+                    <dl>
+                        <dt> - action</dt>
+                        <dd> - para onde o formulario será submetido, padrão: mesma página</dd>
+                        <dt> - method</dt>
+                        <dd> - forma como serão coletados os dados, padrão: GET</dd>
+                    </dl>
+            </article>
+            <aside>
+                <p class="comentario">&lt;!-- tag form --&gt;</p>
+                <dl class="note-html">
+                    <dt>&lt;form action="" method=""&gt;</dt>
+                    <dd>"Mateus"</dd>
+                    <dd>&lt;/form&gt;</dd>
+                    <dt class="comentario">&lt;!-- GET = verbo http que será enviado pra esse endereço no formato get, retorna:<br>
+                    http://páginaatual.com.br/?name=Mateus&email=<br>mateus@mateus.com --&gt;</dt>
+                    <dt class="comentario">&lt;!-- POST = esses dados ficam escondidos --&gt;</dt>
+                </dl>
+            </aside>
+        </section>
+        <section>
+            <h2>&lt;fieldset&gt;</h2>
+            <ul>
+                <li> * Agrupamento de campos</li>
+                <li> * Mesmo propósito</li>
+                <li> * Semântico</li>
+                <li> * Acessibilidade</li>
+            </ul>
+            <dl>
+                <h3>Atributos especiais</h3>
+                <dt>- disabled</dt>
+                <dd> - desabilita todos os elementos internos</dd>
+                <dd> - não serão enviados ao submeter o formulário</dd>
+                <dt>- form</dt>
+                <dd> - o id de um formulário ao esse fieldset pertence</dd>
+                <dd> - não precisa estar dentro do formulário</dd>
+                <dt>- name</dt>
+                <dd> - nome do grupo</dd>
+            </dl>
+            <h3>&lt;legend&gt;</h3>
+            <ul>
+                <li> * nome do agrupamento</li>
+                <li> * primeiro elemento dentro do fieldset</li>
+            </ul>
+            <h2>Prática</h2>
+            <aside>
+                <form action="">
+                    <fieldset>
+                        <legend>Contato</legend>
+                        <label>Nome: <input type="text" name="" id=""></label>
+                        <label>Idade: <input type="number" name="" id=""></label>
+                    </fieldset>
+                    <button>Enviar</button>
+                </form>
+            </aside>
+        </section>
+        <section>
+            <h2>&lt;label&gt;</h2>
+            <ul>
+                <li> * associar e identificar uma (ou mais) tag de entrada de dados</li>
+                <li> * acessibilidade</li>
+                <li> * você poderá clicar para mudar o foco da entrada de dados</li>
+            </ul>
+            <h3>Atributos</h3>
+            <dl>
+                <dt> - for</dt>
+                <dd> - para fazer a conexão entre este label e a tag de entrada de dados</dd>
+                <dd> - é feita via id do input</dd>
+                <dd> - só funciona com elementos específicos</dd>
+                <dd class="explica"> - buttom, input (not hidden), meter, output, progress, select, textarea</dd>
+            </dl>
+            <h2>Prática</h2>
+            <aside>
+                <form>
+                    <label>Nome: <input type="text" name=""></label>
+                </form>
+            </aside>
+        </section>
+        <section>
+            <h2>&lt;buttom&gt;</h2>
+            <ul>
+                <li> * Representa um botão</li>
+                <li> * Usado para enviar formulários</li>
+                <li> * É estilizado pelo user agent</li>
+            </ul>
+            <h3>Atributos comuns</h3>
+            <dl>
+                <dt> - type</dt>
+                <dd> - submit</dd>
+                <dd class="explica"> - envia o formulário</dd>
+                <dd> - reset</dd>
+                <dd class="explica"> - reseta o formulário</dd>
+                <dd> - button</dd>
+                <dd class="explica"> - envia o formulário em alguns navegadores</dd>
+                <dt> - autofocus</dt>
+                <dt> - disabled</dt>
+                <dt> - name</dt>
+                <dt> - value</dt>
+                <dt> - form</dt>
+            </dl>
+            <h2>Prática</h2>
+            <aside>
+                <form id="meu-form">
+                    <label>Nome: <input type="text" value="nome"></label>
+                    <button type="reset" form="meu-form">reset</button>
+                    <input type="submit" form="meu-form" value="Enviar">
+                </form>
+            </aside>
+        </section>
+        <section>
+            <h2>&lt;datalist&gt;</h2>
+            <ul>
+                <li> - Lista de valores como sugestão a uma tag &lt;input&gt;.</li>
+                <li> - Valores sugestivos e não obrigatórios.</li>
+                <li> - Usuários poderão selecionar um dos valores, ou colocar um valor diferente da sugestão.</li>
+            </ul>
+            <h3> * list</h3>
+            <p> - Recebe como valor o id de um &lt;datalist&gt; residente no mesmo documento.</p>
+            <h3> * tipos de input suportados</h3>
+            <p> - text, search,url, tel, email, date, month, week, time, datetime-local, number, range e color.</p>
+            <p> * valores de datalist que não são compatíveis com o tipo do &lt;input&gt; não serão apresentados</p>
+            <h3> * tipos de input não suportados (conforme especificação)</h3>
+            <p> - hidden, password, checkbox, radio, file ou qualquer tipo de button</p>
+            <h2>Prática</h2>
+            <aside>
+                <input type="text" list="fruitsdata" placeholder="Escolha uma fruta">
+                <datalist id="fruitsdata">
+                    <option>apple</option>
+                    <option>banana</option>
+                    <option>mango</option>
+                    <option>orange</option>
+                    <option>cherry</option>
+                </datalist>
+                <input type="color" list="colors">
+                <datalist id="colors">
+                    <option>#ff0000</option>
+                    <option>#00ff00</option>
+                    <option>#0000ff</option>
+                </datalist>
+            </aside>
+        </section>
+        <section>
+            <h2>&lt;input&gt;</h2>
+            <ul>
+                <li> - Um dos mais usados em formulários</li>
+                <li> - Aceita os mais diversos tipos de dados</li>
+                <li> - Um dos mais poderosos e completos</li>
+                <li> - Elevado número de combinações</li>
+            </ul>
+            <h3>Atributos</h3>
+            <ul>
+                <li> - type</li>
+                <li> - name</li>
+                <li> - id</li>
+            </ul>
+            <a href="002-type.html" id="types"><button>Descrição detalhada dos 'type's</button></a>
+        </section>
+        <section>
+            <h2>&lt;textarea&gt;</h2>
+            <ul>
+                <li> - mais de uma linha</li>
+                <li> - útil para textos grandes</li>
+            </ul>
+            <h3>Atributos</h3>
+            <ul>
+                <li> - id</li>
+                <li> - name</li>
+                <li> - rows e cols</li>
+                <li> - maxlength e minlength</li>
+                <li> - wrap</li>
+                <li>... outros atributos comuns aos &lt;input&gt;s: - autocomplete, autofocus, disabled, placeholder, readonly, form, required</li>
+            </ul>
+            <h2>Prática</h2>
+            <aside>
+                <label for="message">Mensagem</label>
+                <textarea name="message" id="message" cols="30" rows="4" placeholder="Mensagem"></textarea>
+            </aside>
+        </section>
+        <section>
+            <h2>&lt;select&gt;</h2>
+            <p> - controle que fornece um menu de opções</p>
+            <h3>&lt;option&gt;</h3>
+            <dl>
+                <dt> - contém as opções a serem selecionadas</dt>
+                <dt> - atributos necessários</dt>
+                <dd> - value</dd>
+            </dl>
+            <h3>Atributos únicos</h3>
+            <dl>
+                <dt> - multiple</dt>
+                <dd> - habilita múltiplas opções</dd>
+                <dt> - size</dt>
+                <dd> - quando opções visíveis</dd>
+            </dl>
+            <h2>Prática</h2>
+            <aside>
+                <label for="carselect">Qual o modelo do carro</label>
+                <select name="carmodel" id="carselect">
+                    <option value="">Selecione o modelo</option>
+                    <option value="fiat">Uno</option>
+                    <option value="audi">A3</option>
+                    <option value="BMW">X6</option>
+                </select>
+            </aside>
+        </section>
+        <section>
+            <h2>optgroup</h2>
+            <h3>Prática</h3>
+            <aside>
+                <label for="">Please choose one or more pets
+                    <select name="pets" id="pets">
+                        <optgroup label="four-legged-pets">
+                            <option value="dog">Dog</option>
+                            <option value="cat">Cat</option>
+                            <option value="hamster">Hamster</option>
+                        </optgroup>
+                        <optgroup label="flying-pets">
+                            <option value="parrot">Parrot</option>
+                            <option value="macaw">Macaw</option>
+                            <option value="albatross">Albatross</option>
+                        </optgroup>
+                    </select>
+                </label>
+            </aside>
+        </section>
+        <section>
+            <h2>Outros campos interessantes</h2>
+            <p>(mas que não tem um ótimo suporte)</p>
+            <a href="https://caniuse.com" target="_blank">Fique de olho no CANIUSE</a>
+            <h2>Prática</h2>
+            <aside>
+                <input type="date">
+                <input type="datetime-local">
+                <input type="month">
+                <input type="time">
+                <input type="week">
+            </aside>
+        </section>
+        <section>
+            <h2>Desenhando</h2>
+            <ul>
+                <li> - pensar nos requisitos</li>
+                <li> - ajuda a definir as necessidades</li>
+            </ul>
+            <h3>Dicas:</h3>
+            <ul>
+                <li> - simples e focado</li>
+                <li> - somente dados necessários</li>
+                <li> - verifique o que te agrada</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Desafio</h2>
+            <aside>
+                <form>
+                    <fieldset>
+                        <legend>Contato</legend>
+
+                            <label class="desafio" for="nome">Nome</label>
+                            <input type="text" id="nome" name="nome" size="30" placeholder="nome completo">
+
+                            <label class="desafio" for="email">Email</label>
+                            <input type="email" id="email" name="email" size="30" placeholder="email@email.com.br">
+
+                            <label class="desafio" for="mensagem">Mensagem</label>
+                            <textarea name="mensagem" id="mensagem" cols="30" rows="10" placeholder="mensagem"></textarea>
+
+                            <button class="desafio" type="submit">Enviar</button>
+                    
+                    </fieldset>
+                </form>
+            </aside>
+        </section>
+    </main>
+    <footer>
+        <p>Feito por Mateus Nunes</p>
+    </footer>
+</body>
+</html>

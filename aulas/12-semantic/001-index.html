@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Semantic</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Semantic</h1>
+    <nav>
+      <a href="#header">&lt;header&gt;</a>
+      <a href="#nav">&lt;nav&gt;</a>
+      <a href="#main">&lt;main&gt;</a>
+      <a href="#article">&lt;article&gt;</a>
+      <a href="#aside">&lt;aside&gt;</a>
+      <a href="#footer">&lt;footer&gt;</a>
+      <a href="#section">&lt;section&gt;</a>
+    </nav>
+  </header>
+  <main>
+    <h2 id="topo">Web semântica</h2>
+    <h3>O que é?</h3>
+    <p>Adiciona significado à uma linguagem, No caso do HTML, para dar significado ao conteúdo.</p>
+    <h3>Web semântica</h3>
+    <p>Controlar a organização e apresentação do nosso conteúdo.</p>
+    <ul>
+      <li> * Cada site é unico, entretando, exitem padrões ou concenções que nós identificamos, intencionalmente ou não intencionalmente</li>
+    </ul>
+    <p>Ao usar uma marcação semântica consistente para identificar os elementos da página, nós ajudamos os user agents a identificar corretamente os elementos e apresentá-los aos visitantates da página.</p>
+    <p>Isso torna extremamente relevante para acessibilidade, ou seja, para visitantes que precisam usar leitores de página, por exemplo. Com uma página desorganizada fica complexo para o visitante com necessidades especiais fazer um bom uso dessa página.</p>
+    <p>Além disso, os motores de busca dão preferência para sites que estão com sua semântica em dia. Um site bem estruturado e organizado é um site melhor encotrado na web</p>
+    <section>
+      <h2>HTML5 semântico</h2>
+      <h3>As tags</h3>
+      <p>Elas que irão ajudar a criar um HTML semântico, pois algumas tags tem significados específicos e orientações claras sobre onde devem ficar e o motivo dela existir</p>
+      <h3>Exemplo</h3>
+      <aside>
+        <ul>
+          <li>&lt;p&gt;</li>
+          <li>Nós (programadores), somos pagos para resolver problemas, não para memorizar soluções</li>
+          <li class="nome">- Mayk Brito</li>
+          <li>&lt;/p&gt;</li>
+        </ul>
+      </aside>
+      <h3>Com uma melhor semântica</h3>
+      <aside>
+        <ul>
+          <li>&lt;blockquote&gt;</li>
+          <li>Nós (programadores), somos pagos para resolver problemas, não para memorizar soluções</li>
+          <li class="nome">&lt;cite&gt;- Mayk Brito&lt;/cite&gt;</li>
+          <li>&lt;/blockquote&gt;</li>
+        </ul>
+      </aside>
+      <h3>Entendo significados</h3>
+      <ul>
+        <li> * Como autor da página é sua responsabilidade entender os significados dos elementos</li>
+        <li> * Muitas vezes é simples, pois o HTML não possui um leque gigante de elementos</li>
+        <li> * algumas vezes é complexo de se entender alguns elementos</li>
+      </ul>
+      <p>Saiba que: alguns elementos você irá usar em todos os documentos que criar, e alguns, talvez nunca precise utilizar</p>
+      <p>Em muitos casos, a marcação do conteúdo é uma questão de gosto pessoal e será diferente de autor para autor</p>
+      <p>Melhorar a semântica é o foco do HTML5</p>
+      <p>Sempre buscaremos regras e padões para aprimorar a estrutura do nosso documento</p>
+    </section>
+    <h2>Seções comuns em documentos HTML</h2>
+    <ul>
+      <li> - cabeçalho &lt;header&gt;</li>
+      <li> - navegação &lt;nav&gt;</li>
+      <li> - conteúdo principal &lt;main&gt;</li>
+      <li> - barra lateral &lt;aside&gt;</li>
+      <li> - rodapé &lt;footer&gt;</li>
+    </ul>
+    <section id="header">
+      <h2>&lt;header&gt;</h2>
+      <dl>
+        <dt> - onde utilizar?</dt>
+        <dd> - quando no início da página, é visto como global</dd>
+        <dd> - pode ser usado em outros elementos semânticos como article e section</dd>
+        <dd> - header dentro de header ou footer? não</dd>
+        <dt> - multiplos headers</dt>
+        <dt> - não possui atributos específicos</dt>
+      </dl>
+    </section>
+    <section id="nav">
+      <h2>&lt;nav&gt;</h2>
+      <ul>
+        <li> - onde e por que utilizar?</li>
+        <li> - geralmente vai dentro do &lt;header&gt;</li>
+        <li> - utilizada apenas para links mais importantes, como menus e outros</li>
+        <li> - não possui atributos específicos</li>
+      </ul>
+    </section>
+    <section id="main">
+      <h2>&lt;main&gt;</h2>
+      <ul>
+        <li> - onde e por que utilizar?</li>
+        <li> - apenas uma vez por página e vai no body</li>
+        <li> - conteúdo principal da página</li>
+        <li> - Não vai menu, propagandas</li>
+        <li> - não possui atributos específicos</li>
+      </ul>
+    </section>
+    <section id="article">
+      <h2>&lt;article&gt;</h2>
+      <ul>
+        <li> - onde e por que utilizar?</li>
+        <li> - não possui atributos específicos</li>
+        <li> - cria blocos de conteúdo que são relacionados</li>
+      </ul>
+    </section>
+    <section id="aside">
+      <h2>&lt;aside&gt;</h2>
+      <dl>
+        <dt> - conteúdos levemente relacionados ao conteúdo principal</dt>
+        <dd> - explicações</dd>
+        <dd> - glossários</dd>
+        <dd> - links extras</dd>
+        <dd> - biografia do autor</dd>
+        <dd> - informações de perfil</dd>
+        <dt> - atributos: apenas os globais</dt>
+      </dl>
+    </section>
+    <section id="footer">
+      <h2>&lt;footer&gt;</h2>
+      <dl>
+        <dt> - geralmente no final da página</dt>
+        <dd> - informações do autor, copyright, contato, sitemap, voltar ao topo</dd>
+        <dt> - atributos globais</dt>
+      </dl>
+    </section>
+    <section id="section">
+      <h2>&lt;section&gt;</h2>
+      <ul>
+        <li> - onde e por que utilizar?</li>
+        <li> - atributos globais</li>
+        <li> - geralmente possui um título</li>
+      </ul>
+    </section>
+    <h2>Elementos não semânticos genéricos</h2>
+    <h3>&lt;div&gt;</h3>
+    <p class="description">Usado se não conseguir achar elemento de bloco semântico</p>
+    <h3>&lt;span&gt;</h3>
+    <p class="description">Usado se não conseguir achar um elemento de texto semântico</p>
+    <p>Em ambas, use atributos globais como id e class para dar mais significado</p>
+  </main>
+  <footer>
+    <p>Made by Mateus Nunes</p>
+    <a href="#topo">Voltar ao topo</a>
+  </footer>
+</body>
+</html>

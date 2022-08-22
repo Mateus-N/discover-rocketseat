@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Selectors</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Pseudo-class</h1>
+    <nav>
+      <a href="001-index.html">Selectors</a>
+      <a href="#" id="atual">Pseudo-class</a>
+      <a href="pseudo-element.html">Pseudo-element</a>
+    </nav>
+  </header>
+  <main>
+    <h2>Pseudo-classes</h2>
+    <p>É um tipo de seletor que irá selecionar um elemento que estiver em um estado específico</p>
+    <p>Exemplo: É o primeiro elemento dentro de uma caixa, ou, é o elemento que está com o ponteiro do mouse em cima dele.</p>
+    <p>Pseudo-classes começam com 2 pontos seguidos do nome da pseudo-class: `:pseudo-class-name`</p>
+    <h3>Selecionando os elementos com pseudo-classes</h3>
+    <dl>
+      <dt>:first-child</dt>
+      <dd>Seleciona o primeiro elemento filho, e apenas o primeiro</dd>
+      <dd><strong>`ul li:first-child`</strong></dd>
+      <dt>:nth-of-type()</dt>
+      <dd>Seleciona o elemento filho desejado e na posição desejada</dd>
+      <dd><strong>`ul li:nth-of-type(2)`</strong></dd>
+      <dd>Caso deseje marcar mais de um pode usar even (pares) e odd (ímpares)</dd>
+    </dl>
+    <article>
+      <h2>Ações do usuário</h2>
+      <dl>
+        <dt>:hover</dt>
+        <dd>Aciona ao passar o mouse por cima</dd>
+        <dd><strong>a:hover</strong></dd>
+        <dt>:focus</dt>
+        <dd>Aciona quando o elemento está em foco, normalmente usado em input</dd>
+        <dd><strong>input:focus</strong></dd>
+      </dl>
+    </article>
+    <article>
+      <h2>disabled e required</h2>
+      <dl>
+        <dt>:disabled</dt>
+        <dd>Aciona quando o elemento está desabilitado, normalmente usado em input</dd>
+        <dd><strong>input:disabled</strong></dd>
+        <dt>:required</dt>
+        <dd>Aciona apenas quando o elemento for obrigatório, normalmente usado no input</dd>
+        <dd><strong>input:required</strong></dd>
+      </dl>
+    </article>
+  </main>
+  <footer>
+    <p>Made by Mateus Nunes</p>
+  </footer>
+</body>
+</html>

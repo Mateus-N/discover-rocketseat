@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>At-Rules</title>
+    <style>
+        * {
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .code {
+            padding: 10px;
+        }
+        dt {
+            padding-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>At-rules</h1>
+    <ul>
+        <li>* Está relacionado ao comportamento do CSS</li>
+        <li>* Começa com o sinal de '@' seguido do identificador e valor</li>
+    </ul>
+    <h2>Mais comuns</h2>
+    <ul>
+        <dt>@import</dt>
+        <dd>Incluir um CSS externo</dd>
+        <dt>@media</dt>
+        <dd>Regras condicionais para dispositivos</dd>
+        <dt>@font-face</dt>
+        <dd>Fontes externas</dd>
+        <dt>@keyframes</dt>
+        <dd>Animation</dd>
+    </ul>
+    <h2>Exemplos</h2>
+    <ul>
+        <li>@import url("http://local.com/style.css")</li>
+        <li class="code">@media (min-width: 500px) {<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;conteúdo <br>}</li>
+        <li class="code">@font-face {<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;conteúdo <br>}</li>
+        <li class="code">@fkeyframes nameofancimation {<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;conteúdo <br>}</li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM</title>
+  <link rel="stylesheet" href="001-style.css">
+</head>
+<body>
+  <header>
+    <h1></h1>
+  </header>
+  <main>
+    <h2 onclick="print()">DOM (Document Object Model)</h2>
+    <ul>
+      <li>É o HTML convertido para um objeto JavaScript</li>
+      <li>API que representa e interage com o HTML</li>
+      <li>Estrutura de dados do tipo árvore criada pelo browser</li>
+      <li>Propriedades e métodos</li>
+    </ul>
+    <h3>Para que?</h3>
+    <ul>
+      <li>JavaScript usa a DOM para se conectar ao HTML</li>
+      <li>Manipular o HTML com JavaScript</li>
+      <li>Você só programa pra WEB por que existe a DOM</li>
+    </ul>
+    <h3 id="teste1">getElementById()</h3>
+    <p>Utiliza o ID do elemento</p>
+    <h3>getElementsByClassName()</h3>
+    <p>Utiliza a classe do elemento, resulta em um HTMLCollection</p>
+    <ul>
+      <li class="teste2">Elemento 1</li>
+      <li class="teste2">Elemento 2</li>
+      <li class="teste2">Elemento 3</li>
+    </ul>
+    <h3>getElementsByTagName()</h3>
+    <p>Utiliza a Tag HTML, resulta em um HTMLCollection</p>
+    <h3>querySelector()</h3>
+    <p>Utiliza o seletor CSS, pega apenas o primeiro que encontrar na página</p>
+    <h3>querySelectorAll()</h3>
+    <p>Utiliza seletor CSS e devolve todos os elementos referente ao seletor, resulta em uma NodeList</p>
+    <h3>Diferença</h3>
+    <p>Na NodeList é possível ser feita um forEach</p>
+    <h3>textContent</h3>
+    <p>manipula o conteúdo, podendo trocar tudo ou apenas adionar algo</p>
+    <h3>innerText</h3>
+    <p>Troca o texto interno do elemento</p>
+    <h3>innerHTML</h3>
+    <p id="abc">Permite a adição de HTML ao código</p>
+    <h3>input</h3>
+    <form action="">
+      <label for="nome">Nome: </label>
+      <input name="nome" id="nome" type="text">
+    </form>
+  </main>
+  <footer>
+    <p>Made by Mateus Nunes</p>
+  </footer>
+</body>
+<script src="001-scripts.js"></script>
+</html>

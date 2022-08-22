@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cores</title>
+    <style>
+        * {
+            font-family: 'Courier New', Courier, monospace;
+        }
+        ul {
+            list-style-type: none;
+        }
+        .css {
+            background-color: black;
+            color: white;
+            font-size: 90%;
+            margin-left: 40px;
+            padding: 12px;
+            max-width: fit-content;
+        }
+        .comentario {
+            color: yellowgreen;
+        }
+    </style>
+</head>
+<body>
+    <h1>Cores</h1>
+    <p>Usamos CSS para alterar cores do nosso documento.</p>
+    <h2>Tipos</h2>
+    <ul>
+        <li>* background-color (para caixas)</li>
+        <li>* color (para textos)</li>
+        <li>* border-color (para caixas)</li>
+        <li>* outros...</li>
+    </ul>
+    <h2>Valores</h2>
+    <p>Podemos definir valores por</p>
+    <ul>
+        <li>* palavra-chave (blue, transparent)</li>
+        <li>* hexadecimal (#990011)</li>
+        <li>* funções: rgb, rgba, hsl, hsla</li>
+    </ul>
+    <h2>CSS</h2>
+    <dl class="css">
+        <dt>element {</dt>
+        <dd class="comentario">/* keyword values */</dd>
+        <dd class="comentario">/* currentcolor = cor atual, mesmo que não colocar nada */</dd>
+        <dd>color: currentcolor;</dd>
+        <dd class="comentario">/* &lt;name-color&gt; values */</dd>
+        <dd>color: red;</dd>
+        <dd>color: orange;</dd>
+        <dd>color: tan;</dd>
+        <dd>color: rebeccapurple;</dd>
+        <dd class="comentario">/* &lt;hex-color&gt; values 0-F */</dd>
+        <dd class="comentario">/* RED GREEN BLUE TRANPARENT */</dd>
+        <dd>color: #090;</dd>
+        <dd>color: #009900;</dd>
+        <dd>color: #090a;</dd>
+        <dd>color: #009900aa;</dd>
+        <dd class="comentario">/* &lt;rgb()&gt; values 0-255 */</dd>
+        <dd>color: rgb(34, 12, 64);</dd>
+        <dd>color: rgba(34, 12, 64, 0.6);</dd>
+        <dd>color: rgb(34 12 64);</dd>
+        <dd>color: rgba(34 12 64 / 0.6)</dd>
+        <dd>color: rgb(34.0 12 64)</dd>
+        <dd>color: rgba(34.0 12 64 / 60%)</dd>
+        <dd class="comentario">/* &lt;hls()&gt; values */</dd>
+        <dd class="comentario">/* Hue - Saturation - Lumiance */</dd>
+        <dd>color: hsl(30, 100%, 50%)</dd>
+        <dd>color: hsla(30, 100%, 50%, 0.6)</dd>
+        <dd>color: hsl(30 100% 50%)</dd>
+        <dd>color: hsla(30 100% 50% / 0.6)</dd>
+        <dd>color: hsl(30.0 100% 50%)</dd>
+        <dd>color: hsla(30.0 100% 50% / 60%)</dd>
+        <dd class="comentario">/* Global values */</dd>
+        <dd>color: inherit;</dd>
+        <dd class="comentario">/* herda a cor do elemento anterior */</dd>
+        <dd>color: Initial;</dd>
+        <dd class="comentario">/* Volta a cor inicial */</dd>
+        <dd>color: unset;</dd>
+        <dd class="comentario">/* Cor não definida, pega a cor do contexto */</dd>
+        <dt>}</dt>
+    </dl>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color" target="_blank">Documentação "color"</a> <br>
+    <a href="https://convertacolor.com/" target="_blank">Converter cores</a>
+</body>
+</html>

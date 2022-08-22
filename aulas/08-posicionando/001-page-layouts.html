@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Layouts</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main id="principal">
+        <h1>Page Layouts</h1>
+        <h2>Tipos</h2>
+        <ul>
+            <li> - Tables</li>
+            <li> - Floats e clear</li>
+            <li> - Frameworks e Grid Systems</li>
+            <li> - Flexbox</li>
+            <li> - Grid</li>
+        </ul>
+        <h2>Posicionamentos</h2>
+        <p>Controlar onde na página, o elemento irá ficar, alterando o fluxo normal dos elementos</p>
+        <ul>
+            <li> - Name: position</li>
+            <li> - Value: static | relative | absolute | fixed</li>
+        </ul>
+        <h3>static</h3>
+        <p>Padrão</p>
+        <h3>relative</h3>
+        <p> - top | right | bottom | left | z-index</p>
+        <p>É relativo a posição inicial da caixa, ela se movimenta mas a posição inicial é mantida.</p>
+        <h3>absolute</h3>
+        <p>A caixa é colocada um nível acima, o posicionamento dela não interage ou interfere nos outros elementos e seu posicionamento é contado a partida do inicio da página. <br>Caso esteja dentro de outra caixa e o posicionamento do elemento pai for relativo, a posição será será absoluta em refêrencia ao elemento pai</p>
+        <h3>fixed</h3>
+        <p>O elemento se torna fixo na página</p>
+        <h3>element stacking</h3>
+        <p>é feito utilizando o z-index e define o posicionamento em profudidade, no eixo z</p>
+        <div>
+            <section id="stacking">
+                <div id="box1"></div>
+                <div id="box2"></div>
+                <div id="box3"></div>
+            </section>
+        </div>
+        <h2>flexbox</h2>
+        <ul>
+            <li>* Nos permite posicionar elementos dentro da caixa</li>
+            <li>* Controle em uma dimensão (horizontal ou vertical)</li>
+            <li>* Alinhamento, direcionamento, ordenar e tamanhos</li>
+        </ul>
+        <p>'''CSS</p>
+        <dl class="css">
+            <dt>div.parent {</dt>
+            <dd>display: flex</dd>
+            <dt>}</dt>
+        </dl>
+        <p>'''</p>
+        <h3>flex-direction</h3>
+        <ul>
+            <li>* Qual a direção do flex: horizontal ou vertical</li>
+            <li>* row | column</li>
+        </ul>
+        <h3>alinhamento</h3>
+        <ul>
+            <li>* justify-content</li>
+            <li>* align-items</li>
+        </ul>
+        <section id="container">
+            <div id="box4"></div>
+            <div id="box5"></div>
+            <div id="box6"></div>
+        </section>
+        <h2>grid</h2>
+        <ul>
+            <li>* Posicionamento dos elementos dentro da caixa</li>
+            <li>* Posicionamento horizontal e vertical ao mesmo tempo</li>
+            <li>* Pode ser flexível ou fixo</li>
+            <li>* Cria espaços para os elementos filhos habitarem</li>
+        </ul>
+        <a href="grid.html">Exemplo de grid e flex</a>
+    </main>
+</body>
+</html>

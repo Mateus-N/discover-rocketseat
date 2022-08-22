@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model</title>
+    <style>
+        * {
+            font-family: 'Courier New', Courier, monospace;
+        }
+        li {
+            list-style-type: circle;
+        }
+        table {
+            border: 1px solid black;
+            background-color: aqua;
+            padding: 4px;
+            margin: 10px;
+            text-align: center;
+        }
+        th {
+            border-right: 1px dotted black;
+            text-align: left;
+        }
+        th, td {
+            max-width: 300px;
+        }
+        .css {
+            width: fit-content;
+            padding: 10px;
+            font-size: 90%;
+            background-color: black;
+            color: white;
+            margin-left: 40px;
+        }
+        .comentario {
+            color: yellowgreen;
+        }
+        #segundaplanilha th, #segundaplanilha td {
+            border: 1px dotted black;
+            padding: 3px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Box Model</h1>
+    <ul>
+        <li>Fundamental para fazer layouts na web</li>
+        <li>Maior facilidade para aplicar o CSS</li>
+    </ul>
+    <h2>O que é?</h2>
+    <p>Uma caixa retangular: Essa caixa possui propriedades de um elemento 2D</p>
+    <table>
+        <tr>
+            <th>Tamanho (Largura x Altura)</th>
+            <td>width | height</td>
+        </tr>
+        <tr>
+            <th>Conteúdo</th>
+            <td>content</td>
+        </tr>
+        <tr>
+            <th>Bordas</th>
+            <td>border</td>
+        </tr>
+        <tr>
+            <th>Preenchimento interno</th>
+            <td>padding</td>
+        </tr>
+        <tr>
+            <th>Espaços fora da caixa</th>
+            <td>margin</td>
+        </tr>
+    </table>
+    <p>* Cada elemento na sua página será considerado uma caixa. *</p>
+    <h2>Box-sizing</h2>
+    <dl>
+        <dt>Como será calculado o tamanho total da caixa?</dt>
+        <dd>- content-box | border-box</dd>
+        <div class="css">
+            <dt>div {</dt>
+            <dd>box-sizing: border-box</dd>
+            <dt>}</dt>
+        </div>
+    </dl>
+    <h2>display: block vs display: inline</h2>
+    <ul>
+        <li>Como as caixas se comportam em relação às outras caixas</li>
+        <li>Comportamento externo das caixas</li>
+    </ul>
+    <div id="segundaplanilha">
+        <table>
+            <tr>
+                <th>**block**</th>
+                <th>**inline**</th>
+            </tr>
+            <tr>
+                <td>Ocupa toda a linha, colocando o próximo elemento abaixo desse</td>
+                <td>Elemento ao lado do outro</td>
+            </tr>
+            <tr>
+                <td>width e height são respeitados</td>
+                <td>width e height não funcionam</td>
+            </tr>
+            <tr>
+                <td>padding, margin, border irão funcionar normalmente</td>
+                <td>somente os valores horizontais de padding, margin e border</td>
+            </tr>
+        </table>
+    </div>
+    <h3>Exemplos</h3>
+    <ul>
+        <li>block: '&lt;p&gt; &lt;div&gt; &lt;section&gt;', todos os headings '&lt;h1&gt;&lt;h2&gt;...'</li>
+        <li>inline: &lt;a&gt; &lt;strong&gt; &lt;span&gt; &lt;em&gt;</li>
+    </ul>
+    <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model" target="_blank">Documentação "The box model"</a>
+    <h2>margin</h2>
+    <p>Espaço entre os elementos</p>
+    <ul>
+        <li>margin-top | margin-right | margin-bottom | margin-left</li>
+        <li>values: '&lt;length&gt;' | '&lt;percentage&gt;' | auto</li>
+    </ul>
+    <dl>
+        <div class="css">
+            <dt>div {</dt>
+            <dd class="comentario">/* shorthand */</dd>
+            <dd>margin: 12px 16px 10px 4px;</dd>
+            <dd>margin: 12px 16px 0;</dd>
+            <dd>margin: 8px 16px;</dd>
+            <dd>margin: 8px;</dd>
+            <dt>}</dt>
+        </div>
+    </dl>
+    <p>* Cuidado com margin collapsing (top se ajunta ao bottom). As margin top e bottom não se somam</p>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/margin" target="_blank">Documentação "margin"</a>
+    <h2>padding</h2>
+    <p>Preencimento interno da caixa</p>
+    <ul>
+        <li>padding-top | padding-right | padding-bottom | padding-left</li>
+        <li>values: '&lt;length&gt;' | '&lt;percentage&gt;'</li>
+    </ul>
+    <dl>
+        <div class="css">
+            <dt>div {</dt>
+            <dd class="comentario">/* shorthand */</dd>
+            <dd>padding: 12px 16px 10px 4px;</dd>
+            <dd>padding: 12px 16px 0;</dd>
+            <dd>padding: 8px 16px;</dd>
+            <dd>padding: 8px;</dd>
+            <dt>}</dt>
+        </div>
+    </dl>
+    <p>* padding poderá causar diferença na largura de um elemento</p>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/padding" target="_blank">Documentação "padding"</a>
+    <h2>border</h2>
+    <p>As bordas da caixa</p>
+    <dl>
+        <dt> - value: '&lt;border-style&gt;' | '&lt;border-width&gt;' | '&lt;border-color&gt;'</dt>
+        <dd> - style: solid | dotted | dashed | double | groove | ridge | inset | outset</dd>
+        <dd> - width: '&lt;length&gt;'</dd>
+        <dd> - color: '&lt;color&gt;'</dd>
+    </dl>
+    <dl>
+        <div class="css">
+            <dt>div {</dt>
+            <dd class="comentario">/* shorthand */</dd>
+            <dd class="comentario">/* top | right | bottom | left */</dd>
+            <dd>border-top: solid 2px;</dd>
+            <dd class="comentario">/* style */</dd>
+            <dd>border: solid;</dd>
+            <dd class="comentario">/* width &lt;length&gt; | style */</dd>
+            <dd>border: 2px dotted;</dd>
+            <dd class="comentario">/* style | color */</dd>
+            <dd>border: outset #f33;</dd>
+            <dd class="comentario">/* width | style | color */</dd>
+            <dd>border: medium dashed green;</dd>
+            <dt>}</dt>
+        </div>
+    </dl>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border" target="_blank">Documentação "border"</a>
+    <h2>outline</h2>
+    <dl>
+        <dt> - diferente em 4 sentidos</dt>
+        <dd> - não modifica o tamanho da caixa, pois não é parte do box model</dd>
+        <dd> - poderá ser diferente de retângular</dd>
+        <dd> - não permite ajustes individuais</dd>
+        <dd> - mais usado pelo user agent para acessibilidade</dd>
+    </dl>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/outline" target="_blank">Documentação "outline"</a>
+    <h2>Por padrão se faz:</h2>
+    <dl>
+        <div class="css">
+            <dt>* {</dt>
+            <dd>box-sizing: border-box;</dd>
+            <dd>margin: 0;</dd>
+            <dt>}</dt>
+        </div>
+    </dl>
+</body>
+</html>

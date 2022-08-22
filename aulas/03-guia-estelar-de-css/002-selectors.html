@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selector and box</title>
+    <style>
+        * {
+            border: 1px solid red; /* Borda */
+            margin: 10px;   /* Espaço externo */
+            padding: 10px;  /* Espaço interno */
+        }
+
+        h1 {
+            color: aqua;
+            background-color: blue;
+            font-size: 60px;
+        }
+
+        #container {
+            width: 500px;
+            background-color: black;
+            color: white;
+            margin: auto;
+        }
+
+        .m-4 {
+            text-align: center;
+        }
+
+        button {
+            text-align: center;
+        }
+
+        p {
+            text-align: justify;
+        }
+    </style>
+</head>
+<body>
+    <!--
+        # Selectors
+
+        Conecta um elemento HTML com o CSS
+
+        ## Tipos
+
+        * Global Selector '*'
+        * Element/Type selector 'h1, h2, p, div'
+        * ID Selector '.red, .m-4'
+        * Attribute selector, Pseudo-class, Pseudo-element e outros
+
+
+        # Caixas
+
+        * você irá perceber que (quase) tudo são caixas do CSS
+        * posicionamento, tamanhos, espaçamentos, bordas, cores
+        * caixa pode ficar ao lado uma da outra, ou acima
+        * elementos HTML são caixas
+    -->
+    <h1>Título</h1>
+    <div id="container">
+        <h2 class="m-4">Container</h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat ea beatae, unde perspiciatis excepturi sapiente amet rem voluptate magnam cum. Eveniet perferendis cupiditate minus ut qui officia, eos dignissimos tenetur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni dignissimos totam voluptatibus esse, natus provident suscipit architecto unde, mollitia, itaque distinctio cupiditate quod ea dolore consectetur tenetur ullam. Dolor, pariatur. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non sunt incidunt autem eum culpa facere aliquid soluta quos doloribus reiciendis rem perferendis, quod corporis vel est suscipit aspernatur. Aperiam, quisquam?</p>
+        <button>Embarcar</button>
+    </div>
+</body>
+</html>

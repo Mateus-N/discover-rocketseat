@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shorthand</title>
+    <style>
+        * {
+            font-family: 'Courier New', Courier, monospace;
+        }
+        ul {
+            list-style-type: none;
+        }
+        #propriedades {
+            list-style-type: disc;
+        }
+    </style>
+</head>
+<body>
+    <h1>Shorthand</h1>
+    <ul>
+        <li>* Junção de propriedades</li>
+        <li>* Resumo</li>
+        <li>* Legível</li>
+    </ul>
+    <h2>CSS</h2>
+    <h3>Background</h3>
+    <h4>Properties</h4>
+    <ul>
+        <li>background-color: #000;</li>
+        <li>background-image: url(images/bg.git);</li>
+        <li>background-repeat: no-repeat;</li>
+        <li>background-position: left top;</li>
+    </ul>
+    <h4>Shorthand</h4>
+    <ul>
+        <li>background: #000 url(images/bg.gif) no-repeat left top;</li>
+    </ul>
+    <h3>font</h3>
+    <h4>Properties</h4>
+    <ul>
+        <li>font-style: italic;</li>
+        <li>font-weight: bold;</li>
+        <li>font-size: .8em;</li>
+        <li>line-height: 1.2;</li>
+        <li>font-family: Arial, sans-serif;</li>
+    </ul>
+    <h4>Shorthand</h4>
+    <ul>
+        <li>font: italic bold .8em/1.2 Arial, sans-serif</li>
+    </ul>
+    <h2>Detalhes</h2>
+    <ul>
+        <li>* Não irá considerar propriedades anteriores.</li>
+        <li>* Valores não especificados irão assumir o valor padrão.</li>
+        <li>* Geralmente, a ordem descrita não importa, mas, se houverem muitas propriedades com valores semelhantes, poderemos encontrar problemas.</li>
+    </ul>
+    <h2>Propriedades que aceitam shorthand</h2>
+    <ul id="propriedades">
+        <li>animation</li>
+        <li>background</li>
+        <li>border</li>
+        <li>border-bottom</li>
+        <li>border-color</li>
+        <li>border-left</li>
+        <li>border-radius</li>
+        <li>border-right</li>
+        <li>border-style</li>
+        <li>border-top</li>
+        <li>border-width</li>
+        <li>colums-rule</li>
+        <li>columns</li>
+        <li>flex</li>
+        <li>flex-flow</li>
+        <li>font</li>
+        <li>grid</li>
+        <li>grid-area</li>
+        <li>grid-column</li>
+        <li>grid-row</li>
+        <li>grid-template</li>
+        <li>list-style</li>
+        <li>margin</li>
+        <li>offset</li>
+        <li>outline</li>
+        <li>overflow</li>
+        <li>padding</li>
+        <li>place-content</li>
+        <li>place-items</li>
+        <li>place-self</li>
+        <li>text-decoration</li>
+        <li>transition</li>
+    </ul>
+    <a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS/Shorthand_properties" target="_blank">Documentação completa</a>
+</body>
+</html>
