@@ -6,7 +6,8 @@
   "scripts": {
     "array": "echo \"Error: no test specified\" && exit 1",
     "matriz": "echo \"Error: no test specified\" && exit 1",
-    "stack": "echo \"Error: no test specified\" && exit 1"
+    "stack": "echo \"Error: no test specified\" && exit 1",
+    "queue": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
